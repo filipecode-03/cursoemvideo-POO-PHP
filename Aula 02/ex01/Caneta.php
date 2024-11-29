@@ -14,10 +14,10 @@
             }
         }
         function tampar() {
-
+            $this->tampada = true;
         }
         function destampar() {
-
+            $this->tampada = false;
         }
     }
 ?>
