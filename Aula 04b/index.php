@@ -8,8 +8,8 @@
 <body>
     <?php 
         require_once 'Caneta.php';
-        $c1 = new Caneta;
-        
+        $c1 = new Caneta("BIC", "Azul", 0.5);
+        $c1 = new Caneta("KKK", "Verde", 1.0);
     ?>
 </body>
 </html>

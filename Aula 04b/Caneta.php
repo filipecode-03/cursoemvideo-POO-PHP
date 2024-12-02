@@ -4,9 +4,11 @@
         private $cor;
         private $ponta;
         private $tampada;
-        public function __construct()
+        public function Caneta($m, $c, $p)
         {
-            $this->cor = "Azul";
+            $this->modelo = $m;
+            $this->cor = $c;
+            $this->ponta = $p;
             $this->tampar();
         }
         public function tampar() {
