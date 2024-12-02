@@ -2,6 +2,15 @@
     class Caneta {
         public $modelo;
         private $ponta;
+        private $tampada;
+        public function __construct()
+        {
+            $this->cor = "Azul";
+            $this->tampar();
+        }
+        public function tampar() {
+            $this->tampada = true;
+        }
         public function getModelo() {
             return $this->modelo;
         }
