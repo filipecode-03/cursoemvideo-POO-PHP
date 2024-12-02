@@ -61,21 +61,53 @@
             $this->setStatus(true);
             if ($t = "CC") {
                 $this->saldo = 50;
-            } else {
-                
+            } elseif ($t = "CP") {
+                $this->saldo = 150;
             }
         }
         public function fecharConta() {
-
+            if ($this->saldo > 0) {
+                echo "Conta com dinheiro";
+            } elseif ($this->saldo < 0) {
+                echo "Conta em débito";
+            } else {
+                $this->setStatus(false);
+            }
         }
-        public function depositar() {
-
+        public function depositar($v) {
+            if ($this->status = true) {
+                $this->setSaldo($this->getSaldo() + $v);
+            } else {
+                echo "Impossível depositar";
+            }
         }
-        public function sacar() {
-
+        public function sacar($v) {
+            if ($this->status = true) {
+                if ($this->saldo > $v) {
+                    $this->setSaldo($this->getSaldo() - $v);
+                } else {
+                    echo "Saldo insuficiente";
+                }
+            } else {
+                echo "Impossível sacar";
+            }
         }
         public function pagarMensal() {
-
+            //$v;
+            if ($this->tipo = "CC") {
+                $v = 12;
+            } elseif ($this->tipo = "CP") {
+                $v = 20;
+            }
+            if ($this->status = true) {
+                if ($this->saldo > $v) {
+                    $this->setSaldo($this->getSaldo() - $v);
+                } else {
+                    echo "Saldo insuficiente";
+                }
+            } else {
+                echo "Impossível pagar";
+            }
         }
     }
 ?>
